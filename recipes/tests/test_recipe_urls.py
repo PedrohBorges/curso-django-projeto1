@@ -27,3 +27,7 @@ class RecipeURLsTest(TestCase):
         response = self.client.get(reverse('recipes-home'))
         self.assertIn('<h1> No recipes found </h1>', response.content.decode(
             'utf-8'))
+
+    def test_recipe_search_url_is_correct(self):
+        search_url = reverse('search')
+        self.assertEqual(search_url, '/recipes/search/')
