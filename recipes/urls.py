@@ -8,7 +8,7 @@ from django.conf import settings
 urlpatterns = [
     path('', views.home, name="recipes-home"),
     path('recipes/search/', views.search, name="search"),
-    path('recipes/category/<int:category_id>/', views.category, name="recipes-category"),
+    path('recipes/category/<int:category_id>/', views.category, name="recipes-category"), # noqa 501
     path('recipe/<int:id>/', views.recipe, name="recipes-recipe"),
     path('admin/', admin.site.urls),
 ]
