@@ -20,7 +20,8 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('', include('recipes.urls'))
+    path('', include('recipes.urls')),
+    path('authors/', include('authors.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, documente_root=settings.MEDIA_ROOT)
